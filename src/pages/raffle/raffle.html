@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Raffle
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button (click)="sortear()" block>Raffle</button>
+
+  <ion-card *ngIf="mostrarSorteo" style="text-align: center">
+    <ion-card-content> The winner is: {{ganador}} and your gift is: {{premio}}</ion-card-content>
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,45 @@
+<ion-header>
+    <ion-navbar  color="primary">
+      <ion-title text-center>Gifts</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+  
+  
+    <ion-item>
+      <ion-input placeholder="Input a gift" [(ngModel)]="regalo"></ion-input>
+      <button ion-button outline item-end icon-start (click)="agregarRegalos()">
+        <ion-icon name="add"></ion-icon>
+        Add
+      </button>
+    </ion-item>
+  
+  
+  
+    <ion-card>
+      <ion-card-header text-center>
+        Gifts
+      </ion-card-header>
+  
+      <ion-card-content>
+  
+        <ion-list>
+          <ion-item-sliding *ngFor="let regalito of regalos; let i = index">
+            <ion-item>
+              {{regalito}}
+            </ion-item>
+            <ion-item-options side="right">
+              <button ion-button color="danger" (click)="delete(i)">
+                <ion-icon name="trash"></ion-icon>
+                Delete
+              </button>
+            </ion-item-options>
+          </ion-item-sliding>
+        </ion-list>
+      </ion-card-content>
+  
+    </ion-card>
+  
+  
+  </ion-content>
